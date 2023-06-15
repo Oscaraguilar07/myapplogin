@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<head>
+  <link rel="stylesheet" type="text/scss" href="login.page.scss">
+</head>
+
+
+
+
+
+
+
+<!--inicio tarejeta del login------------------------------------>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-content>
+      <ion-toolbar color="primary">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1">
+            <div class="columna-izquierda">
+
+            </div>
+          </ion-col>
+          <ion-col size="10">
+            <div class="columna-centro">
+
+              <ion-card>
+
+                <ion-card-header>
+                  <ion-card-title>Login</ion-card-title>
+                </ion-card-header>
+            
+                <ion-card-content>
+                  <form [formGroup]="formularioLogin">
+            
+                    <ion-item>
+                      <ion-label position="floating">Usuario</ion-label>
+                      <ion-input formControlName="nombre"></ion-input>
+                    </ion-item>
+            
+                    <ion-item>
+                      <ion-label position="floating">Password</ion-label>
+                      <ion-input formControlName="password" type="password"></ion-input>
+                    </ion-item>
+            
+                  </form>
+            
+                  <ion-button (click)="ingresar()">
+                    Ingresar
+                  </ion-button>
+            
+                </ion-card-content>
+            
+              </ion-card>
+
+            </div>
+          </ion-col>
+          <ion-col size="1">
+            <div class="columna-derecha">
+
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      </ion-toolbar>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!--fin tarjeta de login---------------------------------------->
+
+
+
+
+
+<!--inicio footet----------------------------------------------->
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+<!--fin footer------------------------------------------------->
